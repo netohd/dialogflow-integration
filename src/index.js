@@ -14,8 +14,9 @@ const CONFIGURATION = {
 }
 
 const sessionClient = new dialogflow.SessionsClient(CONFIGURATION);
-const detectIntent = async (languageCode, queryText, sessionId) => {
 
+// Faz o processamento da intent no dialogflow
+const detectIntent = async (languageCode, queryText, sessionId) => {
     let sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
 
     let request = {
